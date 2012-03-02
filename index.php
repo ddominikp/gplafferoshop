@@ -17,5 +17,7 @@ customers::display();
 transactions::display();
 login::display();
 
-database::getConn()->close();
+/* rozszerzona klasa database o __destruct()
+  database::getConn()->close();
+*/
 ?>
