@@ -32,7 +32,8 @@ class module
 	    while($row=$result->fetch_array(MYSQL_ASSOC))
             {
                 //TODO dodac filtrowanie argumentow php_self
-                echo '<form action="'.$_SERVER['PHP_SELF'].'" method="post"><tr>';
+                //update: script name nie ma tego problemu :)
+                echo '<form action="'.$_SERVER['SCRIPT_NAME'].'" method="post"><tr>';
 		list($key,$value)=each($row);
 		echo '<td><input type="text" name="'.$table.'['.$key.']" value="'.$value.'" readonly="readonly"></td>';
 		while(list($key,$value)=each($row))
