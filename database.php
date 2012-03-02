@@ -35,5 +35,10 @@ class database
 
 		return $mysqli;
 	}
+	function __destruct()
+	{
+		//Nie jestem pewny, czy obiekt nie zginie za szybko, ale tak chyba jest wygodniej ;)
+		$this->getConn()->close();
+	}
 }
 ?>
